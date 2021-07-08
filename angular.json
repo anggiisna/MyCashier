@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/auth.scss",
+              "src/assets/admin.scss"
             ],
             "scripts": []
           },
@@ -94,7 +96,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/auth.scss",
+              "src/assets/admin.scss"
             ],
             "scripts": []
           }

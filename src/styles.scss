@@ -1,4 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  color: #000 !important;
+  height: 100%;
+}
+
+.bg-red {
+  background-color: #fe3155;
+}
+
+.border-bottom {
+  border-bottom: 2px solid black !important;
+}
+
+.border-top {
+  border-top: 2px solid black !important;
+}
+
+.link-black {
+  color: #000 !important;
+}
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+.active {
+  font-weight: bold;
+}

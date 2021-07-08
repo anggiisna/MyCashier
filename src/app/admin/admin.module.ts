@@ -1,30 +1,43 @@
-import { UserComponent } from './user/user.component';
-import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { NavbarComponent } from './../navbar/navbar.component';
+import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './admin.component';
+import { HomeComponent } from './home/home.component';
+import { SettingsComponent } from './settings/settings.component';
 import { ProductsComponent } from './products/products.component';
+import { UsersComponent } from './users/users.component';
+import { TransactionComponent } from './transaction/transaction.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeAdminComponent,
+    component: AdminComponent,
     children: [
       {
-        path: 'dashboard',
-        component: HomeAdminComponent
+        path: 'home',
+        component: HomeComponent
       },
       {
-        path: 'list-product',
+        path: 'products',
         component: ProductsComponent
       },
       {
-        path: 'user',
-        component: UserComponent
+        path: 'users',
+        component: UsersComponent
+      },
+      {
+        path: 'recent-transaction',
+        component: TransactionComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
       },
       {
         path: '',
-        redirectTo: '/admin/dashboard',
+        redirectTo: '/home',
         pathMatch: 'full'
       }
     ]
@@ -33,13 +46,17 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeAdminComponent,
+    AdminComponent,
+    HomeComponent,
+    SettingsComponent,
     ProductsComponent,
-    UserComponent
+    UsersComponent,
+    TransactionComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ]
 })
 export class AdminModule { }

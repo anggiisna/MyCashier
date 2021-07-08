@@ -1,8 +1,6 @@
-
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+
 
 const routes: Routes = [
   {
@@ -11,16 +9,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
     path: 'admin',
     loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule)
+  },
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
   },
 ];
 
@@ -29,4 +23,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routeAuth = { LoginComponent, RegisterComponent }
