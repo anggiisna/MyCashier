@@ -1,13 +1,16 @@
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import { environment } from './../../environments/environment';
+import { AngularFireModule } from '@angular/fire';
 import { NavbarComponent } from './../navbar/navbar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { HomeComponent } from './home/home.component';
-import { SettingsComponent } from './settings/settings.component';
 import { ProductsComponent } from './products/products.component';
-import { UsersComponent } from './users/users.component';
 import { TransactionComponent } from './transaction/transaction.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 const routes: Routes = [
@@ -24,16 +27,8 @@ const routes: Routes = [
         component: ProductsComponent
       },
       {
-        path: 'users',
-        component: UsersComponent
-      },
-      {
         path: 'recent-transaction',
         component: TransactionComponent
-      },
-      {
-        path: 'settings',
-        component: SettingsComponent
       },
       {
         path: '',
@@ -48,15 +43,20 @@ const routes: Routes = [
   declarations: [
     AdminComponent,
     HomeComponent,
-    SettingsComponent,
     ProductsComponent,
-    UsersComponent,
     TransactionComponent,
     NavbarComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-  ]
+    NgbModule,
+    FlexLayoutModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+  ],
+  providers: [
+    DatePipe
+  ],
 })
 export class AdminModule { }

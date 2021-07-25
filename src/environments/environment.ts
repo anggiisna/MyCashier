@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyCFqHNPibZiI-AuTo26_qh9HSE8DgT3AaM",
-    authDomain: "mycashier-54ac5.firebaseapp.com",
-    projectId: "mycashier-54ac5",
-    storageBucket: "mycashier-54ac5.appspot.com",
-    messagingSenderId: "680994069481",
-    appId: "1:680994069481:web:84533d6365defe82e38978",
-    measurementId: "G-CZ6MBB40FC"
+    apiKey: "AIzaSyAi5k1caRfRAn_3snsR6PX9L2IUvQlbN3A",
+    authDomain: "mycashier-57a5f.firebaseapp.com",
+    projectId: "mycashier-57a5f",
+    storageBucket: "mycashier-57a5f.appspot.com",
+    messagingSenderId: "213988130107",
+    appId: "1:213988130107:web:24da32ad78c64a0851cb1e",
+    measurementId: "G-NXZQP420R4"
   }
 };
 
