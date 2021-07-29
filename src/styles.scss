@@ -36,3 +36,19 @@ body {
 .active {
   font-weight: bold;
 }
+
+.card-cart {
+  max-height: 350px;
+  overflow: auto;
+  p {
+    margin: 0 !important;
+  }
+}
+
+.card-product {
+  transition: transform 0.3s cubic-bezier(0.34, 2, 0.6, 1), box-shadow 0.2s ease;
+  &:hover {
+    cursor: pointer !important;
+    transform: scale(1.02);
+  }
+}

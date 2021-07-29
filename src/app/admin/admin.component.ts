@@ -31,9 +31,13 @@ export class AdminComponent implements OnInit {
   }
 
   signOut() {
-    this.auth.signOut().then(resp => {
-      this.router.navigateByUrl('auth');
-    });
+    var _confirm = confirm('yakin ingin keluar ?');
+
+    if(_confirm) {
+      this.auth.signOut().then(resp => {
+        this.router.navigateByUrl('auth');
+      });
+    }
   }
 
 }
